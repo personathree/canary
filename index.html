@@ -1,0 +1,449 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+<title>you're a canary, i'm a coalmine</title>
+<!-- hi! if you're reading this, feel free to inspo from this code 
+ (or even just copy it entirely!) but just be warned this was an 
+ edited code from 2023 that i reformatted for my headmate 😭
+ so it's... very messy as you can tell by the abundance of lines -->
+
+<style>
+
+    @font-face {
+        font-family: bell;
+        src: url(hug/Schoolbell-Regular.ttf);
+    }
+
+    #position {
+        position: absolute;
+        top: 20%;
+        left: 33%;
+        transform: scale(1.7);
+    }
+
+    body {
+        padding: 30px;
+        text-align: left;
+        color: black;
+        font-family: arial;
+        font-size: 25px;
+        background: #767675b7;
+        background-blend-mode: soft-light;
+        background-image: url("hug/bg.jpg");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    ::selection {
+        color: rgb(229, 232, 234);
+        background: rgb(66, 84, 69);
+    }
+
+    /* textboxes */
+
+    #scroll3 {
+        height: 290px;
+        width: 175px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-family: bell;
+        font-size: 9.7px;
+        letter-spacing: 0.7px;
+        position: absolute;
+        margin: 11px 0px 0px 4px;
+        line-height: 13px;
+        z-index: 3;
+        overflow-y: hidden;
+        color: rgb(31, 31, 28);
+    }
+
+    #scroll4 {
+        height: 195px;
+        width: 180px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-top: 0px;
+        font-family: bell;
+        font-size: 9.7px;
+        letter-spacing: 0.7px;
+        overflow: auto;
+        position: absolute;
+        margin: -9px 0px 0px 200px;
+        margin-top: 5px;
+        line-height: 13px;
+        z-index: -2;
+    }
+
+    #scroll5 {
+        height: 40px;
+        width: 225px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-top: 10px;
+        font-family: bell;
+        font-size: 9.7px;
+        overflow: auto;
+        position: absolute;
+        margin: 256px 0px 0px 260px;
+        line-height: 18px;
+        z-index: ;
+    }
+
+    #scroll5 a {
+        color: rgb(224, 214, 186);
+        text-decoration-line: none;
+        font-weight: normal;
+    }
+
+    #scroll5 mark {
+        background: rgb(34, 45, 31);
+    }
+
+    /* images */
+
+    #hughiemain {
+        position: absolute;
+        pointer-events: none;
+        filter: saturate(20%);
+    }
+
+    #hughiemain img {
+        position: absolute;
+        margin-left: 160px;
+        margin-top: 100px;
+        filter: drop-shadow(0px 1px transparent) drop-shadow(0 -1px black) drop-shadow(1px 0 black) drop-shadow(-1px 0 black);
+    }
+
+    #flowers {
+        position: absolute;
+        transform: rotate(190deg);
+        margin-top: 170px;
+        margin-left: 310px;
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    #flowers img {
+        width: 140px;
+        filter: hue-rotate(80deg);
+    }
+
+    #newbg {
+        position: absolute;
+        z-index: -100;
+        margin-left: -20px;
+        margin-top: 11px;
+        filter: drop-shadow(0px 2px rgb(34, 45, 31)) drop-shadow(0 -1px rgb(34, 45, 31)) drop-shadow(3px 0 rgb(34, 45, 31)) drop-shadow(-1px 0 rgb(34, 45, 31));
+        pointer-events: none;
+    }
+
+    #newbg img {
+        width: 430px;
+    }
+
+    #flowers2 {
+        position: absolute;
+        z-index: 8;
+        margin-left: 330px;
+        margin-top: 200px;
+        pointer-events: none;
+
+    }
+
+    #flowers2 img {
+        width: 120px;
+        filter: hue-rotate(190deg);
+    }
+
+    #butcher {
+        position: absolute;
+        margin-left: 290px;
+        margin-top: 155px;
+        z-index: 5;
+        filter: saturate(20%);
+        pointer-events: none;
+    }
+
+    #butcher img {
+        width: 150px;
+    }
+
+    #stamps {
+        position: absolute;
+        margin-left: -10px;
+        margin-top: 180px;
+        filter: opacity(80%);
+        pointer-events: none;
+    }
+
+    #homelander {
+        position: absolute;
+        margin-left: 65px;
+        margin-top: 218px;
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    #homelander img {
+        width: 105px;
+    }
+
+    #circle {
+        position: absolute;
+        margin-left: 215px;
+        margin-top: 212px;
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    #circle img {
+        width: 85px;
+    }
+
+    #divy {
+
+        position: absolute;
+        margin-left: 200px;
+        margin-top: 14px;
+        z-index: 5;
+        pointer-events: none;
+
+    }
+
+    #divy img {
+        width: 200px;
+    }
+
+
+    /* markdown */
+
+    a {
+        color: rgb(79, 104, 79);
+        text-decoration-style: dotted;
+        text-decoration-thickness: 1;
+        transition: .2s ease all;
+    }
+
+    a:hover {
+        color: rgb(169, 169, 135);
+    }
+
+    small {
+        color: rgb(71, 66, 59);
+    }
+
+    #title {
+        position: absolute;
+        font-family: bell;
+        font-weight: bold;
+        font-size: 14px;
+        margin-left: -230px;
+        margin-top: 24px;
+        width: 320px;
+        z-index: 99;
+        color: rgb(227, 213, 183);
+        text-align: right;
+        letter-spacing: 1px;
+        filter: drop-shadow(0px 2px rgb(75, 92, 77)) drop-shadow(0 -1px rgb(55, 68, 57)) drop-shadow(2px 0 rgba(0, 0, 0, 0.288)) drop-shadow(-1px 0 black);
+    }
+
+    #newtitle {
+        position: absolute;
+        font-family: bell;
+        font-size: 12px;
+        margin-left: -165px;
+        margin-top: 27px;
+        width: 320px;
+        z-index: 99;
+        color: rgb(227, 213, 183);
+        text-align: right;
+        letter-spacing: 1px;
+        filter: drop-shadow(0px 2px rgb(75, 92, 77)) drop-shadow(0 -1px rgb(55, 68, 57)) drop-shadow(2px 0 rgba(0, 0, 0, 0.288)) drop-shadow(-1px 0 black);
+    }
+
+    #newtitle a {
+        text-decoration-line: none;
+        color: white;
+    }
+
+    mark {
+        background: #262530;
+        color: white;
+        border-radius: 2px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    i {
+        color: rgb(72, 85, 74);
+    }
+
+    b {
+        color: rgb(128, 123, 85);
+    }
+
+    u {
+        color: rgb(101, 85, 77);
+        text-decoration-style: dashed;
+        text-decoration-color: rgb(154, 139, 104);
+        ;
+    }
+
+    button {
+        background: #535944;
+        border: 2px solid rgb(105, 95, 85);
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: -2px;
+        padding-bottom: -2px;
+        font-size: 9px;
+        font-family: bios;
+        transition: .6s ease all;
+    }
+
+    button:hover {
+        background: rgba(255, 255, 255, 0.158);
+        border: 2px solid white;
+        color: rgb(40, 63, 38);
+    }
+
+    mark {
+        background: rgb(88, 88, 70);
+        font-weight: bold;
+    }
+
+    .redUnderline {
+        color: #000000;
+        border-bottom: 1px dotted #555555;
+    }
+
+    .ac {
+        position: absolute;
+        display: none;
+        font-size: 10px;
+        letter-spacing: 1px;
+        width: 100px;
+        margin-top: 7px;
+        margin-left: 265px;
+        filter: drop-shadow(0px 2px rgb(75, 92, 77)) drop-shadow(0 -1px rgb(55, 68, 57)) drop-shadow(2px 0 rgba(0, 0, 0, 0.288)) drop-shadow(-1px 0 black);
+    }
+
+    .ac a {
+        text-decoration-style: none;
+        text-decoration-line: none;
+        color: white;
+    }
+
+    @media only screen and (max-width: 640px) {
+        #position {
+            left: -40px;
+            transform: scale(1.3)
+        }
+    }
+</style>
+
+<script src="wobble.js"></script>
+
+<body>
+
+    <div id="position">
+        <div id="newbg">
+            <img src="hug/noteee.png">
+        </div>
+
+        <div id="flowers2">
+            <img src="https://file.garden/Zagf2LAXJwHlct9M/flower2.png">
+        </div>
+
+        <div id="butcher">
+            <img src="hug/hurrr.png">
+        </div>
+
+        <div id="homelander">
+            <img src="hug/homel.png">
+        </div>
+
+        <div id="circle">
+            <img src="hug/huecircle.png">
+        </div>
+
+        <div id="divy">
+            <img src="hug/divider.png">
+        </div>
+
+
+        <div id="stamps">
+            <img src="hug/1stamp.gif" width=60>
+            <br>
+            <img src="hug/3stamp.png" width=60>
+            <br>
+            <img src="hug/2stamp.png" width=60>
+        </div>
+
+        <div id="title"><img src="https://i.postimg.cc/y83csw-XV/g79.gif" width="12px">⠀ <span id="wobble">hughie</span>
+            ...</div>
+
+        <div id="newtitle">
+            <a href="https://pronouns.cc/@hughie">or</a> canary!
+        </div>
+        <br>
+        <div id="scroll3">⠀⠀he<b> /</b> him. ⠀30y. <font color="#838f60">eugh.</font> ⠀<a
+                href="https://the-boys.fandom.com/wiki/Hughie_Campbell"><b>introject</b></a>
+            <br>
+            ⠀⠀⠀<font size="px" color="#838f60"><b><mark>♂</mark> ⠀infj 296 9w1</b> melancholic ⠀ </font>
+            <br> <br> oh gosh. uh. hi! i'm <i>hughie</i> or canary. introject of that guy from <a
+                href="https://www.amazon.com/The-Boys-Season-1/dp/B0DWSKFWQJ"><u>the boys</u></a>. not really sure
+            how else
+            to
+            describe
+            <br> <u>me.</u> ⠀⠀⠀i like <i>the crane wives</i>,
+            <br> ⠀⠀⠀⠀⠀⠀<u>car seat headrest</u>, talking
+            <br> ⠀⠀⠀⠀heads, fortnite,
+            <i>the boys</i>,
+            <br> ⠀⠀⠀⠀⠀⠀spiderman, pokemon, and
+            <br>⠀⠀⠀⠀⠀⠀ <i>my friends.</i> im also.
+            <br>⠀⠀⠀⠀⠀⠀our main work fronter.
+            <br> ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<font color="#838f60">#Yep⠀#ImEmployed</font>
+        </div>
+
+        <DIV ID="scroll4">
+            i'm the scary <i>source-attached</i> guy they warn you about.
+            i have a <i>healthy</i> detachment
+            <small>#therapy! some of you should try it</small>. but, uh,
+            there's still some attachment there. that being said, don't talk to me <i>just</i> because of that! i'm
+            open to talk. just be normal. you wouldn't. walk up to someone on the street and talk about your
+            <i>"source"</i>, so don't do it to me.
+
+            
+            <p style="font-family:arial; font-size: 7px; line-height: 8px; letter-spacing: 0.7px; color: rgb(69, 88, 75); text-decoration: underline;">CLICK to apologize!
+                <br> CLICK to be saved!
+                <br> CLICK to forgive!
+                <br> CLICK to forget!
+                <br> CLICK to be pure!
+            </p>
+
+        </DIV>
+        <div id="hughiemain"><img src="hug/h2.png" width=190 style="display:none;"></div>
+
+        <div id="scroll5">
+            <b><mark><a href="https://pronouns.cc/@hughie">PRNS.CC</a></mark></b> <b><mark><a
+                        href="https://theboys.atabook.org">ATA</a></mark></b>
+            <b><mark><a href="https://sptfy.in/theboys">SPOTIFY</a></mark></b>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -54,7 +54,7 @@
         padding-left: 10px;
         padding-top: 10px;
         font-family: bell;
-        font-size: 9.7px;
+        font-size: 9px;
         letter-spacing: 0.7px;
         position: absolute;
         margin: 11px 0px 0px 4px;
@@ -62,23 +62,41 @@
         z-index: 3;
         overflow-y: hidden;
         color: rgb(31, 31, 28);
+        text-shadow:
+        -1px -1px 0 #e7e8e2,
+        1px -1px 0 #e7e8e2,
+        -1px 1px 0 #e7e8e2,
+        1px 1px 0 #e7e8e2,
+        -2px 0 0 #e7e8e2,
+        2px 0 0 #e7e8e2,
+        0 -2px 0 #e7e8e2,
+        0 2px 0 #e7e8e2;
     }
 
     #scroll4 {
-        height: 195px;
+        height: 245px;
         width: 180px;
         padding: 5px;
         padding-left: 10px;
         padding-top: 0px;
         font-family: bell;
-        font-size: 9.7px;
+        font-size: 9px;
         letter-spacing: 0.7px;
         overflow: auto;
         position: absolute;
         margin: -9px 0px 0px 200px;
-        margin-top: 5px;
+        margin-top: 1px;
         line-height: 13px;
-        z-index: -2;
+        z-index: 99;
+        text-shadow:
+        -1px -1px 0 #e7e8e2,
+        1px -1px 0 #e7e8e2,
+        -1px 1px 0 #e7e8e2,
+        1px 1px 0 #e7e8e2,
+        -2px 0 0 #e7e8e2,
+        2px 0 0 #e7e8e2,
+        0 -2px 0 #e7e8e2,
+        0 2px 0 #e7e8e2;
     }
 
     #scroll5 {
@@ -178,41 +196,45 @@
 
     #stamps {
         position: absolute;
-        margin-left: -10px;
+        margin-left: -20px;
         margin-top: 180px;
-        filter: opacity(80%);
+        filter: opacity(90%);
         pointer-events: none;
+        transform: rotate(-10deg);
+        filter: drop-shadow(0px 2px rgb(34, 45, 31)) drop-shadow(0 -1px rgb(34, 45, 31)) drop-shadow(3px 0 rgb(34, 45, 31)) drop-shadow(-1px 0 rgb(34, 45, 31));
     }
 
     #homelander {
         position: absolute;
-        margin-left: 65px;
-        margin-top: 218px;
+        margin-left: 45px;
+        margin-top: 258px;
         z-index: 5;
         pointer-events: none;
+        transform: rotate(9deg);
+        filter: drop-shadow(0px 2px rgb(34, 45, 31)) drop-shadow(0 -1px rgb(34, 45, 31)) drop-shadow(3px 0 rgb(34, 45, 31)) drop-shadow(-1px 0 rgb(34, 45, 31));
     }
 
     #homelander img {
-        width: 105px;
+        width: 125px;
     }
 
     #circle {
         position: absolute;
-        margin-left: 215px;
-        margin-top: 212px;
+        margin-left: 205px;
+        margin-top: 222px;
         z-index: 5;
         pointer-events: none;
     }
 
     #circle img {
-        width: 85px;
+        width: 95px;
     }
 
     #divy {
 
         position: absolute;
         margin-left: 200px;
-        margin-top: 14px;
+        margin-top: 9px;
         z-index: 5;
         pointer-events: none;
 
@@ -222,6 +244,32 @@
         width: 200px;
     }
 
+    #note1 {
+        position: absolute;
+        margin-left: -48px;
+        margin-top: 19px; 
+    }
+
+    #note1 img {
+        filter: drop-shadow(0px 2px rgb(75, 92, 77)) drop-shadow(0 -1px rgb(55, 68, 57)) drop-shadow(2px 0 rgba(0, 0, 0, 0.288)) drop-shadow(-1px 0 black);
+    }
+
+    #notetext {
+        position: absolute;
+        margin-top: -60px; 
+        margin-left: 12px; 
+        transform: rotate(13deg); 
+        font-size: 8.3px;
+        font-family: bell;  
+        color: rgb(104, 107, 104); 
+    }
+
+    #notetext img {
+        width: 40px; 
+        padding-left: 5px; 
+        filter: none;
+        border-radius: 0px 0px 10px 0px; 
+    }
 
     /* markdown */
 
@@ -244,14 +292,15 @@
         position: absolute;
         font-family: bell;
         font-weight: bold;
-        font-size: 14px;
-        margin-left: -230px;
-        margin-top: 24px;
+        font-size: 15px;
+        margin-left: -250px;
+        margin-top: 25px;
         width: 320px;
         z-index: 99;
         color: rgb(227, 213, 183);
         text-align: right;
         letter-spacing: 1px;
+
         filter: drop-shadow(0px 2px rgb(75, 92, 77)) drop-shadow(0 -1px rgb(55, 68, 57)) drop-shadow(2px 0 rgba(0, 0, 0, 0.288)) drop-shadow(-1px 0 black);
     }
 
@@ -259,7 +308,7 @@
         position: absolute;
         font-family: bell;
         font-size: 12px;
-        margin-left: -165px;
+        margin-left: -150px;
         margin-top: 27px;
         width: 320px;
         z-index: 99;
@@ -281,6 +330,7 @@
         padding-bottom: 2px;
         padding-left: 5px;
         padding-right: 5px;
+        text-shadow: none;
     }
 
     i {
@@ -345,6 +395,24 @@
         color: white;
     }
 
+    #mark2 {
+        background: rgba(109, 144, 109, 0.256);
+        color: rgb(43, 90, 64);
+        font-weight: normal;
+        padding-left: 2px;
+        padding-right: 2px;
+        border-radius: 0px;
+        text-shadow:
+        -1px -1px 0 #e7e8e2,
+        1px -1px 0 #e7e8e2,
+        -1px 1px 0 #e7e8e2,
+        1px 1px 0 #e7e8e2,
+        -2px 0 0 #e7e8e2,
+        2px 0 0 #e7e8e2,
+        0 -2px 0 #e7e8e2,
+        0 2px 0 #e7e8e2;
+    }
+
     @media only screen and (max-width: 640px) {
         #position {
             left: 130px;
@@ -371,11 +439,11 @@
         </div>
 
         <div id="homelander">
-            <img src="hug/homel.png">
+            <img src="hug/butche.png">
         </div>
 
         <div id="circle">
-            <img src="hug/huecircle.png">
+            <img src="hug/homel.png">
         </div>
 
         <div id="divy">
@@ -391,41 +459,60 @@
             <img src="hug/2stamp.png" width=60>
         </div>
 
-        <div id="title"><img src="https://i.postimg.cc/y83csw-XV/g79.gif" width="12px">⠀ <span id="wobble">hughie</span>
-            ...</div>
+        <div id="title"><span id="wobble">hughie</span>
+        </div>
 
         <div id="newtitle">
-            <a href="https://pronouns.cc/@hughie">or</a> canary!
+            ... <a href="https://pronouns.cc/@hughie">or</a> canary! ⠀<img src="https://i.postimg.cc/y83csw-XV/g79.gif"
+                width="12px">
         </div>
         <br>
         <div id="scroll3">⠀⠀he<b> /</b> him. ⠀30y. <font color="#838f60">eugh.</font> ⠀<a
                 href="https://the-boys.fandom.com/wiki/Hughie_Campbell"><b>introject</b></a>
             <br>
             ⠀⠀⠀<font size="px" color="#838f60"><b><mark>♂</mark> ⠀infj 296 9w1</b> melancholic ⠀ </font>
-            <br> <br> oh gosh. uh. hi! i'm <i>hughie</i> or canary. introject of that guy from <a
-                href="https://www.amazon.com/The-Boys-Season-1/dp/B0DWSKFWQJ"><u>the boys</u></a>. not really sure
+            <br> <br> ⠀⠀oh gosh. uh. hi! i'm <i>hughie</i> or
+            <br>⠀canary. introject of that guy from
+            <br> <mark id="mark2"><a href="https://www.amazon.com/The-Boys-Season-1/dp/B0DWSKFWQJ">the boys</a></mark>.
+            not really sure
             how else
-            to
-            describe
-            <br> <u>me.</u> ⠀⠀⠀i like <i>the crane wives</i>,
-            <br> ⠀⠀⠀⠀⠀⠀<u>car seat headrest</u>, fortnite,
-            <br> ⠀⠀⠀⠀death cab for cutie,
+            to ⠀⠀⠀⠀⠀describe
+            <u>me.</u> co-host, queer,
+            <br> ⠀⠀⠀⠀⠀⠀ and a fractured psyche of
+            <br>⠀⠀⠀spores and cracked angel statues.
+
+            <br> ⠀⠀ ⠀⠀⠀⠀i like <i>the crane wives</i>,
+            <br> ⠀⠀⠀⠀⠀⠀⠀<u>car seat headrest</u>, death
+            <br> ⠀⠀⠀⠀⠀⠀cab for cutie,
             <i>the boys</i>,
-            <br> ⠀⠀⠀⠀⠀⠀spiderman, pokemon, and
-            <br>⠀⠀⠀⠀⠀⠀ <i>my friends.</i> im also.
-            <br>⠀⠀⠀⠀⠀⠀our main work fronter.
-            <br> ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<font color="#838f60">#Yep⠀#ImEmployed</font>
+            <br> ⠀⠀⠀⠀⠀⠀crywank, pokemon, and <i>my</i>
+            <br>⠀⠀⠀⠀⠀⠀⠀ <i>friends.</i> i talk kind of
+            <br> ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀monotonously here and
+            <br> ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀there, or so i've heard.
+            <br>
         </div>
 
         <DIV ID="scroll4">
-            i'm the scary <i>source-attached</i> guy they warn you about.
-            i have a <i>healthy-ish</i> detachment
-            <small>#therapy!</small>. but, uh,
-            there's still some attachment there. obviously that being said, don't talk to me <i>just</i> because of that! i'm
-            open to talk. just be normal. you wouldn't walk up to a stranger and start talking about your <i>source</i> with no warning!
+            i'm the scary <mark id="mark2">source-attached</mark> guy they warn you about!
+            i have a <i>healthy</i> detachment from it as it should be. but, uh,
+            there's still some attachment there. obviously. with that being said, don't talk to me <i>just</i> because
+            of
+            that. i'm here pretty often as of late for <u>reasons</u>. feel free to say hi whenever. i don't bite! i may
+            snarl sometimes. <mark id="mark2">#peaceful</mark>
+            <br> i align a lot with
+            <br> <u>fbsa</u> / spore hughie
+            <br> source-wise. take
+            <br> that as you wish.
 
-            <p
-                style="font-family:arial; font-size: 7px; line-height: 8px; letter-spacing: 0.7px; color: rgb(69, 88, 75); text-decoration: underline;">
+            <p style="font-family:arial; font-size: 7px; line-height: 8px; letter-spacing: 0.7px; margin-top: 1.rem;  color: rgb(69, 88, 75); text-decoration: underline;     text-shadow:
+        -1px -1px 0 #e7e8e2,
+        1px -1px 0 #e7e8e2,
+        -1px 1px 0 #e7e8e2,
+        1px 1px 0 #e7e8e2,
+        -2px 0 0 #e7e8e2,
+        2px 0 0 #e7e8e2,
+        0 -2px 0 #e7e8e2,
+        0 2px 0 #e7e8e2;">
                 CLICK to apologize!
                 <br> CLICK to be saved!
                 <br> CLICK to forgive!
@@ -434,6 +521,13 @@
             </p>
 
         </DIV>
+
+        <div id="note1"><img src="hug/note2.png" width=80>
+            <div id="notetext"> <audio id="sound1" src="candyglass.mp3" preload="auto"></audio>
+<a class="icon fa-volume-up" onclick="document.getElementById('sound1').play();"><img src="hug/huey.png"></a>
+<br> candyglass</div>
+        </div>
+
         <div id="hughiemain"><img src="hug/h2.png" width=190 style="display:none;"></div>
 
         <div id="scroll5">

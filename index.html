@@ -6,7 +6,8 @@
 <!-- hi! if you're reading this, feel free to inspo from this code 
  (or even just copy it entirely!) but just be warned this was an 
  edited code from 2023 that i reformatted for my headmate 😭
- so it's... very messy as you can tell by the abundance of lines -->
+ so it's... very messy as you can tell by the abundance of lines 
+ 6/22/26 update: I do not recommend inspo from this not because im gaekeeping you can go ahead . But this code is so overtly messy i do not recommend it -->
 
 <style>
     @font-face {
@@ -17,7 +18,7 @@
     #position {
         position: absolute;
         top: 20%;
-        left: 33%;
+        left: 29%;
         transform: scale(1.7);
     }
 
@@ -27,7 +28,7 @@
         color: black;
         font-family: arial;
         font-size: 25px;
-        background: #767675b7;
+        background: #586257b7;
         background-blend-mode: soft-light;
         background-image: url("hug/bg.jpg");
         -webkit-background-size: cover;
@@ -57,24 +58,25 @@
         font-size: 9px;
         letter-spacing: 0.7px;
         position: absolute;
-        margin: 11px 0px 0px 4px;
+        transform: rotate(2deg);
+        margin: 24px 0px 0px 2px;
         line-height: 13px;
         z-index: 3;
         overflow-y: hidden;
-        color: rgb(31, 31, 28);
+        color: #544b41;
         text-shadow:
-            -1px -1px 0 #e7e8e2,
-            1px -1px 0 #e7e8e2,
-            -1px 1px 0 #e7e8e2,
-            1px 1px 0 #e7e8e2,
-            -2px 0 0 #e7e8e2,
-            2px 0 0 #e7e8e2,
-            0 -2px 0 #e7e8e2,
-            0 2px 0 #e7e8e2;
+            -1px -1px 0 #d8d0b7,
+            1px -1px 0 #d8d0b7,
+            -1px 1px 0 #d8d0b7,
+            1px 1px 0 #d8d0b7,
+            -2px 0 0 #d8d0b7,
+            2px 0 0 #d8d0b7,
+            0 -2px 0 #d8d0b7,
+            0 2px 0 #d8d0b7;
     }
 
     #scroll4 {
-        height: 245px;
+        height: 295px;
         width: 180px;
         padding: 5px;
         padding-left: 10px;
@@ -84,24 +86,26 @@
         letter-spacing: 0.7px;
         overflow: auto;
         position: absolute;
-        margin: -9px 0px 0px 200px;
+        color: #544b41;
+        margin: -9px 0px 0px 202px;
+        transform: rotate(-2deg);
         margin-top: 1px;
         line-height: 13px;
         z-index: 99;
         text-shadow:
-            -1px -1px 0 #e7e8e2,
-            1px -1px 0 #e7e8e2,
-            -1px 1px 0 #e7e8e2,
-            1px 1px 0 #e7e8e2,
-            -2px 0 0 #e7e8e2,
-            2px 0 0 #e7e8e2,
-            0 -2px 0 #e7e8e2,
-            0 2px 0 #e7e8e2;
+            -1px -1px 0 #d8d0b7,
+            1px -1px 0 #d8d0b7,
+            -1px 1px 0 #d8d0b7,
+            1px 1px 0 #d8d0b7,
+            -2px 0 0 #d8d0b7,
+            2px 0 0 #d8d0b7,
+            0 -2px 0 #d8d0b7,
+            0 2px 0 #d8d0b7;
     }
 
     #scroll5 {
-        height: 40px;
-        width: 225px;
+        height: 140px;
+        width: 295px;
         padding: 5px;
         padding-left: 10px;
         padding-right: 20px;
@@ -110,9 +114,13 @@
         font-size: 9.7px;
         overflow: auto;
         position: absolute;
-        margin: 256px 0px 0px 260px;
+        margin: 180px 0px 0px 400px;
         line-height: 18px;
-        z-index: ;
+    }
+
+    #scroll5 img {
+        filter: brightness(80%);
+        width: 80px;
     }
 
     #scroll5 a {
@@ -123,6 +131,83 @@
 
     #scroll5 mark {
         background: rgb(34, 45, 31);
+    }
+
+    #linktext {
+        position: absolute;
+        margin-top: -72px;
+        margin-left: 15px;
+        line-height: 23.8px;
+        font-size: 9.3px;
+        font-family: bell;
+        color: rgb(104, 107, 104);
+    }
+
+    #linktext a:hover {
+        color: rgb(120, 137, 118);
+        padding-right: 20px;
+    }
+
+    #newinfo {
+        height: 290px;
+        width: 175px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-family: bell;
+        font-size: 9.4px;
+        letter-spacing: 0.7px;
+        position: absolute;
+        margin: 31px 0px 0px 80px;
+        line-height: 11px;
+        z-index: 3;
+        overflow-y: hidden;
+        color: #526249;
+    }
+
+    #newinfo u {
+        color: #544b41;
+    }
+
+    #scroll6 {
+        height: 60px;
+        width: 105px;
+        padding: 5px;
+        padding-left: 10px;
+        font-family: bell;
+        font-size: 9px;
+        letter-spacing: 0.7px;
+        position: absolute;
+        scrollbar-width: none;
+        transform: rotate(-10deg);
+        margin: -9.5px 0px 0px 407px;
+        line-height: 13px;
+        z-index: 3;
+        overflow-y: scroll;
+        color: #544b41;
+        background: rgba(150, 139, 125, 0.059);
+    }
+
+    #personality {
+        height: 290px;
+        width: 175px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-family: bell;
+        font-size: 9.4px;
+        letter-spacing: 0.7px;
+        position: absolute;
+        margin: 58px 0px 0px 23px;
+        line-height: 10px;
+        z-index: 3;
+        overflow-y: hidden;
+        color: #415338;
+        pointer-events: none;
+    }
+
+    #personality b {
+        color: rgb(177, 163, 131);
     }
 
     /* images */
@@ -140,20 +225,6 @@
         filter: drop-shadow(0px 1px transparent) drop-shadow(0 -1px black) drop-shadow(1px 0 black) drop-shadow(-1px 0 black);
     }
 
-    #flowers {
-        position: absolute;
-        transform: rotate(190deg);
-        margin-top: 170px;
-        margin-left: 310px;
-        z-index: 3;
-        pointer-events: none;
-    }
-
-    #flowers img {
-        width: 140px;
-        filter: hue-rotate(80deg);
-    }
-
     #newbg {
         position: absolute;
         z-index: -100;
@@ -163,31 +234,42 @@
         pointer-events: none;
     }
 
+    #exbg {
+        position: absolute;
+        z-index: -100;
+        margin-left: 320px;
+        margin-top: -21px;
+        transform: rotate(-10deg);
+        filter: drop-shadow(0px 2px rgb(34, 45, 31)) drop-shadow(0 -1px rgb(34, 45, 31)) drop-shadow(3px 0 rgb(34, 45, 31)) drop-shadow(-1px 0 rgb(34, 45, 31));
+        pointer-events: none;
+        z-index: -500;
+    }
+
+    #exbg img {
+        width: 230px;
+    }
+
+    #poem {
+        position: absolute;
+        z-index: 40;
+        margin-left: 380px;
+        margin-top: 103px;
+        transform: rotate(10deg);
+        filter: drop-shadow(0px 2px rgb(34, 45, 31)) drop-shadow(0 -1px rgb(34, 45, 31)) drop-shadow(3px 0 rgb(34, 45, 31)) drop-shadow(-1px 0 rgb(34, 45, 31));
+        pointer-events: none;
+    }
+
     #newbg img {
         width: 430px;
-    }
-
-    #flowers2 {
-        position: absolute;
-        z-index: 8;
-        margin-left: 330px;
-        margin-top: 200px;
-        pointer-events: none;
-
-    }
-
-    #flowers2 img {
-        width: 120px;
-        filter: hue-rotate(190deg);
     }
 
     #butcher {
         position: absolute;
         margin-left: 290px;
         margin-top: 155px;
-        z-index: 5;
-        filter: saturate(20%);
+        z-index: 92;
         pointer-events: none;
+        filter: saturate(80%);
     }
 
     #butcher img {
@@ -201,13 +283,17 @@
         filter: opacity(90%);
         pointer-events: none;
         transform: rotate(-10deg);
-        filter: drop-shadow(0px 2px rgb(34, 45, 31)) drop-shadow(0 -1px rgb(34, 45, 31)) drop-shadow(3px 0 rgb(34, 45, 31)) drop-shadow(-1px 0 rgb(34, 45, 31));
+        filter: drop-shadow(0px 2px rgb(48, 68, 42)) drop-shadow(0 -1px rgb(83, 104, 77)) drop-shadow(3px 0 rgba(65, 84, 48, 0.368)) drop-shadow(-1px 0 rgb(88, 102, 84));
+    }
+
+    #stamps img {
+        filter: saturate(20%);
     }
 
     #homelander {
         position: absolute;
         margin-left: 45px;
-        margin-top: 258px;
+        margin-top: 253px;
         z-index: 5;
         pointer-events: none;
         transform: rotate(9deg);
@@ -220,28 +306,30 @@
 
     #circle {
         position: absolute;
-        margin-left: 205px;
-        margin-top: 222px;
-        z-index: 5;
+        margin-left: 195px;
+        margin-top: 195px;
+        z-index: 9;
         pointer-events: none;
+        transform: rotate(2deg);
+        filter: drop-shadow(0px 2px rgb(34, 45, 31)) drop-shadow(0 -1px rgb(34, 45, 31)) drop-shadow(3px 0 rgb(34, 45, 31)) drop-shadow(-1px 0 rgb(34, 45, 31));
     }
 
     #circle img {
-        width: 95px;
+        width: 125px;
     }
 
     #divy {
 
         position: absolute;
-        margin-left: 10px;
-        margin-top: 14px;
+        margin-left: -20px;
+        margin-top: 19px;
         z-index: 5;
         pointer-events: none;
 
     }
 
     #divy img {
-        width: 180px;
+        width: 210px;
     }
 
     #note1 {
@@ -271,6 +359,18 @@
         border-radius: 0px 0px 10px 0px;
     }
 
+    #rain {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    #rain img {
+        width: 230px;
+        position: absolute;
+        margin-left: 400px;
+        margin-top: 100px;
+    }
+
     /* markdown */
 
     a {
@@ -293,36 +393,37 @@
         font-family: bell;
         font-weight: bold;
         font-size: 15px;
-        margin-left: -250px;
-        margin-top: 25px;
+        margin-left: -239px;
+        margin-top: 39px;
         width: 320px;
         z-index: 99;
-        color: rgb(227, 213, 183);
+        color: rgb(146, 156, 145);
         text-align: right;
         letter-spacing: 1px;
-        transform: rotate(4deg);
-        filter: drop-shadow(0px 2px rgb(75, 92, 77)) drop-shadow(0 -1px rgb(55, 68, 57)) drop-shadow(2px 0 rgba(0, 0, 0, 0.288)) drop-shadow(-1px 0 black);
+        filter: drop-shadow(0px 2px rgb(60, 80, 62)) drop-shadow(0 -1px rgb(55, 68, 57)) drop-shadow(2px 0 rgba(79, 94, 76, 0.288)) drop-shadow(-1px 0 rgb(52, 59, 47));
     }
 
     #newtitle {
         position: absolute;
         font-family: bell;
         font-size: 12px;
-        margin-left: -150px;
-        margin-top: 35px;
+        margin-left: -219px;
+        margin-top: 50px;
         width: 320px;
-        z-index: 99;
-        color: rgb(227, 213, 183);
+        z-index: 70;
+        color: rgb(224, 214, 189);
         text-align: right;
         letter-spacing: 1px;
-        transform: rotate(2deg);
-        filter: drop-shadow(0px 2px rgb(75, 92, 77)) drop-shadow(0 -1px rgb(55, 68, 57)) drop-shadow(2px 0 rgba(0, 0, 0, 0.288)) drop-shadow(-1px 0 black);
+        filter: drop-shadow(0px 2px rgb(75, 92, 77)) drop-shadow(0 -1px rgb(55, 68, 57)) drop-shadow(2px 0 rgba(136, 109, 75, 0.692)) drop-shadow(-1px 0 rgba(136, 109, 75, 0.692));
     }
 
     #newtitle a {
         text-decoration-line: none;
-        color: white;
+        color: rgb(192, 174, 144);
+        font-size: 10px;
     }
+
+
 
     #right {
         position: absolute;
@@ -330,13 +431,13 @@
         margin-top: -22px;
         pointer-events: none;
         transform: rotate(-90deg);
-        filter:brightness(90%);
-        border-radius: 30px; 
+        filter: brightness(90%);
+        border-radius: 30px;
     }
 
     #right img {
         width: 90px;
-        border-radius: 100px; 
+        border-radius: 100px;
     }
 
     mark {
@@ -350,16 +451,15 @@
     }
 
     i {
-        color: rgb(72, 85, 74);
+        color: rgb(95, 109, 97);
     }
 
     b {
-        color: rgb(128, 123, 85);
+        color: rgb(154, 134, 97);
     }
 
     u {
-        color: rgb(101, 85, 77);
-        text-decoration-style: dashed;
+        color: rgb(151, 128, 101);
         text-decoration-color: rgb(154, 139, 104);
         ;
     }
@@ -413,20 +513,20 @@
 
     #mark2 {
         background: rgba(109, 144, 109, 0.256);
-        color: rgb(43, 90, 64);
+        color: rgb(55, 101, 75);
         font-weight: normal;
         padding-left: 2px;
         padding-right: 2px;
         border-radius: 0px;
         text-shadow:
-            -1px -1px 0 #e7e8e2,
-            1px -1px 0 #e7e8e2,
-            -1px 1px 0 #e7e8e2,
-            1px 1px 0 #e7e8e2,
-            -2px 0 0 #e7e8e2,
-            2px 0 0 #e7e8e2,
-            0 -2px 0 #e7e8e2,
-            0 2px 0 #e7e8e2;
+            -1px -1px 0 #d8d0b7,
+            1px -1px 0 #d8d0b7,
+            -1px 1px 0 #d8d0b7,
+            1px 1px 0 #d8d0b7,
+            -2px 0 0 #d8d0b7,
+            2px 0 0 #d8d0b7,
+            0 -2px 0 #d8d0b7,
+            0 2px 0 #d8d0b7;
     }
 
     @media only screen and (max-width: 640px) {
@@ -443,29 +543,42 @@
 
     <div id="position">
         <div id="newbg">
-            <img src="hug/noteee.png">
+            <img src="hug/note4.png">
         </div>
 
-        <div id="flowers2">
-            <img src="https://file.garden/Zagf2LAXJwHlct9M/flower2.png">
+        <div id="exbg">
+            <img src="hug/newpage.png">
+
+        </div>
+
+        <div id="poem">
+            <img src="hug/poem.png" width="100 ">
         </div>
 
         <div id="butcher">
-            <img src="hug/hurrr.png">
+            <img src="hug/hupy.png">
         </div>
 
         <div id="homelander">
-            <img src="hug/butche.png">
+            <img src="hug/butchies.png">
         </div>
 
         <div id="circle">
-            <img src="hug/homel.png">
+            <img src="hug/butchbell.png">
         </div>
 
         <div id="divy">
             <img src="hug/divider.png">
         </div>
 
+        <div id="rain">
+            <img src="hug/rain.png">
+        </div>
+
+        <img src="hug/fool.gif"
+            style="width:35px; margin-top: 112px; margin-left: 493px; position: absolute; transform:rotate(-9deg);">
+        <img src="hug/poison.png"
+            style="width:50px; margin-top: 90px; margin-left: 470px; position: absolute; transform:rotate(-9deg);">
 
         <div id="stamps">
             <img src="hug/1stamp.gif" width=60>
@@ -475,37 +588,43 @@
             <img src="hug/2stamp.png" width=60>
         </div>
 
-        <div id="title"><span id="wobble">hughie</span>
+        <div id="title"><span id="wobble">hughie </span><img src="https://i.postimg.cc/QxmN5L5t/IMG-3050.png"
+                width="12px">
         </div>
 
         <div id="newtitle">
-            ... <a href="https://pronouns.cc/@hughie">or</a> canary! ⠀<img src="https://i.postimg.cc/y83csw-XV/g79.gif"
-                width="12px">
+            <a href="https://pronouns.cc/@hughie">or</a> canary
+        </div>
+
+        <div id="newinfo">
+            he <b>/</b> him.⠀ <u>adult</u>
+            <br>⠀⠀⠀<a href="https://the-boys.fandom.com/wiki/Hughie_Campbell"><b>introject</b></a> alter.
+        </div>
+
+        <div id="personality">
+            <b>infj 296</b> <u>9w1</u> spsx</b> ⠀<i>melancholic</i>.
         </div>
         <br>
         <div id="scroll3">
-            <p style="transform:rotate(4deg); margin-top: -4x; ">⠀⠀he<b> /</b> him. ⠀30y. <font color="#838f60">eugh.
-                </font> ⠀<a href="https://the-boys.fandom.com/wiki/Hughie_Campbell"><b>introject</b></a>
-                ⠀⠀⠀<font size="px" color="#838f60"><b><mark>♂</mark> ⠀infj 296 9w1</b> melancholic ⠀ </font>
-            </p>
-            ⠀⠀oh gosh. uh. hi! i'm <i>hughie</i> or
-            <br>⠀canary. introject of that guy from
+            <br> <br>
+            ⠀
+            ⠀oh gosh. uh. hi! i'm <i>hughie</i> or
+            <br>⠀<u>canary</u>. introject of that guy from
             <br> <mark id="mark2"><a href="https://www.amazon.com/The-Boys-Season-1/dp/B0DWSKFWQJ">the boys</a></mark>.
             not really sure
             how else
-            to ⠀⠀⠀⠀⠀describe
-            <u>me.</u> co-host, queer,
-            <br> ⠀⠀⠀⠀⠀⠀ and a fractured psyche of
-            <br>⠀⠀⠀spores and cracked angel statues.
-
+            to ⠀⠀⠀⠀describe
+            <b>me.</b> a fractured psyche
+            <br> ⠀⠀⠀⠀⠀⠀of <i>spores</i>, cracked angel
+            <br> ⠀⠀⠀statues, and <b>roadkill</b>. queer-ish.
             <br> ⠀⠀ ⠀⠀⠀⠀i like <i>the crane wives</i>,
             <br> ⠀⠀⠀⠀⠀⠀⠀<u>car seat headrest</u>, death
             <br> ⠀⠀⠀⠀⠀⠀cab for cutie,
             <i>the boys</i>,
             <br> ⠀⠀⠀⠀⠀⠀crywank, pokemon, and <i>my</i>
-            <br>⠀⠀⠀⠀⠀⠀⠀ <i>friends.</i> i talk kind of
-            <br> ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀monotonously here and
-            <br> ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀there, or so i've heard.
+            <br>⠀⠀⠀⠀⠀ <i>friends.</i> i can talk kind of dryly
+            <br> ⠀⠀⠀⠀⠀⠀⠀⠀at times, which can be
+            <br> ⠀⠀⠀⠀⠀⠀⠀offputting, or so i've heard..
             <br>
         </div>
 
@@ -519,15 +638,15 @@
             <br> <b>can't</b> pause it once
             <br> it starts yet. sorry.
 
-            <p style="font-family:arial; font-size: 7px; line-height: 8px; letter-spacing: 0.7px; margin-top: 1.rem;  color: rgb(69, 88, 75); text-decoration: underline;     text-shadow:
-        -1px -1px 0 #e7e8e2,
-        1px -1px 0 #e7e8e2,
-        -1px 1px 0 #e7e8e2,
-        1px 1px 0 #e7e8e2,
-        -2px 0 0 #e7e8e2,
-        2px 0 0 #e7e8e2,
-        0 -2px 0 #e7e8e2,
-        0 2px 0 #e7e8e2;">
+            <p style="font-family:arial; font-size: 7px; line-height: 8px; letter-spacing: 0.7px; margin-top: 3.2rem;  color: rgb(69, 88, 75); text-decoration: underline;     text-shadow:
+        -1px -1px 0 #d8d0b7,
+        1px -1px 0 #d8d0b7,
+        -1px 1px 0 #d8d0b7,
+        1px 1px 0 #d8d0b7, 
+        -2px 0 0 #d8d0b7,
+        2px 0 0 #d8d0b7,
+        0 -2px 0 #d8d0b7,
+        0 2px 0 #d8d0b7;">
                 CLICK to apologize!
                 <br> CLICK to be saved!
                 <br> CLICK to forgive!
@@ -537,24 +656,45 @@
 
         </DIV>
 
-        <div id="note1"><img src="hug/note2.png" width=80>
-            <div id="notetext"> <audio id="sound1" src="candyglass.mp3" preload="auto"></audio>
+        <div id="scroll6">
+            <b>scroll here!</b> some more info on me, but also just me spilling my guts. <i>kind of like the whale.</i>
+            oversharing on the internet award.
+            anyways. i'm an autism holder. we <i>(as in my system.)</i> all have it of course.
+            the
+            <i>'holder'</i> part means i carry a lot more parts about it. staring at people through their souls. not
+            grasping socials cues. <i>(i do this one a lot. i think.)</i> talking weirdly. the fun stuff!
+            <b>(sarcasm.)</b> but hughie, <i>why</i> did you need to put this? <b>for fun!</b> and to let you know. this
+            is also to see if anyone would read this far. some people are really desperate to know everything about
+            internet strangers. i know our limits. nothing here is shared that's too personal.
+        </div>
+
+        <div id="note1"><img src="hug/note5.png" width=80>
+            <div id="notetext"> <audio id="sound1" src="hug/thefeeling.mp3" preload="auto"></audio>
                 <a class="icon fa-volume-up" onclick="document.getElementById('sound1').play();"><img
                         src="hug/huey.png"></a>
-                <br> candyglass
+                <br> the feeling
             </div>
         </div>
 
         <div id="right">
-            <img src="hug/topright.png"> 
+            <img src="hug/topright.png">
         </div>
 
         <div id="hughiemain"><img src="hug/h2.png" width=190 style="display:none;"></div>
 
         <div id="scroll5">
-            <b><mark><a href="https://pronouns.cc/@hughie">PRNS.CC</a></mark></b> <b><mark><a
-                        href="https://theboys.atabook.org">ATA</a></mark></b>
-            <b><mark><a href="https://sptfy.in/theboys">SPOTIFY</a></mark></b></mark></b>
+            <img src="hug/bookmark.png" width=100px style="margin-left: 30px; ">
+            <br>
+            <img src="hug/bookmark.png" width=100px>
+            <br>
+            <img src="hug/bookmark.png" width=100px>
+            <div id="linktext">
+                <a href="https://pronouns.cc/@hughie" style="margin-left: 49px;">PRNS.CC</a>
+                <br>
+                <a href="https://theboys.atabook.org" style="margin-left: 9px;">ATABOOK</a>
+                <br>
+                <a href="https://sptfy.in/theboys" style="margin-left: 9px;">SPOTIFY</a>
+            </div>
         </div>
     </div>
     </div>
